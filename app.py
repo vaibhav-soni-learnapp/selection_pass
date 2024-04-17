@@ -6,7 +6,7 @@ from io import StringIO
 def send_file(file):
     url = 'https://crates.dev.zero1byzerodha.com/users/file'
     headers = {
-        'Authorization': 'Bearer CIkam6eUXoOmeSYHrZTJ6kKdpH1y4ZdkdzO9XyusJpNNqYxOxq'
+        'Authorization': 'Bearer d011a53f5413423fceaf0bf8e9db78dde18dff63'
     }
     files = {
         'file': file.getvalue()
