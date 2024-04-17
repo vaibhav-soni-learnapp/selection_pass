@@ -19,11 +19,14 @@ def main():
         st.write("Uploaded File Content:")
         dataframe = pd.read_csv(uploaded_file)
         st.dataframe(dataframe)
-        # Perform the file upload
-        result = upload_file(uploaded_file)
-        # Display the result
-        st.write("Server Response:")
-        st.text(result)
+
+        # Button to send the file to server
+        if st.button('Send to Server'):
+            uploaded_file.seek(0)  # Reset file pointer to the beginning
+            result = upload_file(uploaded_file)
+            # Display the result
+            st.write("Server Response:")
+            st.text(result)
 
 if __name__ == "__main__":
     main()
